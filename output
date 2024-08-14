@@ -1,0 +1,12 @@
+1.Bicycle
+2.Bike
+3.Car
+Enter choice:
+3
+Car changes gear to speed up the vehicle
+Enter distance travelled
+100
+Enter time
+5
+Speed is20.0
+Car applies break when user spots an animal on the road.
