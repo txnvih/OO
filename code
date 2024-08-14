@@ -1,0 +1,112 @@
+package demo;
+import java.util.*;
+
+interface Vehicle
+
+{
+	public void gear_change();
+	
+	public void speed_up();
+
+	public void apply_breakes();
+
+}
+
+class Bicycle implements Vehicle
+{
+	public void gear_change() {
+		System.out.println("Bicycle has no gears");
+	}
+	public void speed_up() {
+		Scanner sc= new Scanner(System.in);
+		float d,t, s;
+		System.out.println("Enter distance travelled");
+		d= sc.nextFloat();
+		System.out.println("Enter time");
+		t= sc.nextFloat();
+		s=d/t;
+		System.out.println("Speed is"+s);
+	}
+	public void apply_breakes() {
+		System.out.println("It applies breaks when a stone appears");
+	}
+}
+
+class Bike implements Vehicle
+{
+	public void gear_change() {
+		System.out.println("Bike changes gears when person wants to increase speed");
+	}
+	public void speed_up() {
+		Scanner sc= new Scanner(System.in);
+		float d,t, s;
+		System.out.println("Enter distance travelled");
+		d= sc.nextFloat();
+		System.out.println("Enter time");
+		t= sc.nextFloat();
+		s=d/t;
+		System.out.println("Speed is"+s);
+	}
+	public void apply_breakes() {
+		System.out.println("The person apllies breaks when they see the red signal");
+	}
+}
+
+class Car implements Vehicle
+{
+	public void gear_change() {
+		System.out.println("Car changes gear to speed up the vehicle");
+	}
+	public void speed_up() {
+		Scanner sc= new Scanner(System.in);
+		float d,t, s;
+		System.out.println("Enter distance travelled");
+		d= sc.nextFloat();
+		System.out.println("Enter time");
+		t= sc.nextFloat();
+		s=d/t;
+		System.out.println("Speed is"+s);
+	}
+	public void apply_breakes() {
+		System.out.println("Car applies break when user spots an animal on the road. ");
+	}
+}
+
+
+public class ass5 {
+
+	public static void main(String[] args)
+	{
+		Bicycle b= new Bicycle();
+		Bike bi= new Bike();
+		Car c= new Car();
+		int x;
+		Scanner sc= new Scanner(System.in);
+		System.out.println("1.Bicycle");
+		System.out.println("2.Bike");
+		System.out.println("3.Car");
+		System.out.println("Enter choice:");
+		x= sc.nextInt();
+		switch (x)
+		{
+		case 1:
+			b.gear_change();
+			b.speed_up();
+			b.apply_breakes();
+			break;
+		case 2:
+			bi.gear_change();
+			bi.speed_up();
+			bi.apply_breakes();
+			break;
+		case 3:
+			c.gear_change();
+			c.speed_up();
+			c.apply_breakes();
+			break;
+		default:
+			System.out.println("Invalid");
+		}
+	}
+
+}
